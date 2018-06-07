@@ -1,2 +1,2 @@
-# hepic
-🥇 hepic Repo to host files about integration and VueJS app.
+# Hepic
+🥇 hepic repo to host files about integration and VueJS app.
