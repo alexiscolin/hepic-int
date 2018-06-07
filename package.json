@@ -1,0 +1,13 @@
+{
+  "name": "hepic",
+  "version": "0.0.1",
+  "description": "Hepic app repo",
+  "main": "index.js",
+  "repository": "https://github.com/alexiscolin/hepic.git",
+  "author": "Alexis Colin <nesquimo@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "pug": "^2.0.3"
+  }
+}
