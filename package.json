@@ -17,9 +17,15 @@
   "private": true,
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-less": "^3.5.0",
+    "gulp-pug": "^4.0.1",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "less": "^3.0.4",
-    "pug": "^2.0.3",
+    "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3"
