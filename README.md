@@ -3,7 +3,7 @@
 
 ## development
 ### Frameworks & preprocessors
-This project is written using frammeworks and library and various preprocessors for HTML, JS and css
+This project is written using frammeworks and libraries and various preprocessors for HTML, JS and CSS
 
 * LESS
 * PUG/Jade
@@ -13,4 +13,4 @@ This project is written using frammeworks and library and various preprocessors 
 This project require some Tools
 
 * WebPack 4 (and CLI)
-* Gulp 
+* Gulp
