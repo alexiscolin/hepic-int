@@ -3,13 +3,20 @@
   "version": "0.0.1",
   "description": "Hepic app repo",
   "main": "index.js",
+  "scripts": {
+    "int": "webpack --config int.config.js"
+  },
   "repository": "https://github.com/alexiscolin/hepic.git",
-  "author": "Alexis Colin <nesquimo@gmail.com>",
+  "author": "Alexis Colin <nesquimo@gmail.com> (https:www.de-jaune-et-de-bleu.com)",
+  "contributors": ["Nathalie Vidon", "Edgar Julien", "Hugo Lechleiter"],
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
     "less": "^3.0.4",
     "pug": "^2.0.3",
-    "webpack": "^4.11.1"
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3"
   }
 }
