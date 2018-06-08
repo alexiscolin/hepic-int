@@ -1,1 +1,1 @@
-window.console.log('START');
+window.console.log('START!');
