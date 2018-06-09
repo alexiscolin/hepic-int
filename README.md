@@ -1,3 +1,6 @@
+<p align="center"><img src="http://files.de-jaune-et-de-bleu.com/img/github/hepic.png" width="50%"></p>
+<p>&nbsp;</p>
+
 # Hepic
 🥇 hepic repo to host files about integration and VueJS app.
 
