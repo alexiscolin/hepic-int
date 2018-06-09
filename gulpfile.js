@@ -5,22 +5,20 @@ const minifyCSS = require('gulp-csso');
 const del = require('del');
 
 gulp.task('clean', function(){
-  del('int/build/**');
+  del.sync('int/build/**');
 });
 
 gulp.task('html', function(){
-  del('int/build/**', {force:true});
   return gulp.src('int/src/pages/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('int/build'))
 });
 
 gulp.task('css', function(){
-  del('int/build/**', {force:true});
-  return gulp.src('int/src/style/*.less')
+  return gulp.src('int/src/assets/style/*.less')
     .pipe(less())
     .pipe(minifyCSS())
-    .pipe(gulp.dest('int/build/dist/css'))
+    .pipe(gulp.dest('int/build/assets/css'))
 });
 
 
