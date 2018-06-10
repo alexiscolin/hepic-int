@@ -22,7 +22,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('css', function(){
-  return gulp.src(int.src + '/assets/style/*.less')
+  return gulp.src(int.src + '/assets/style/**/*.less')
     .pipe(less())
     .pipe(minifyCSS())
     .pipe(gulp.dest(int.build + '/assets/css'))
@@ -48,7 +48,7 @@ gulp.task('sync', function() {
 gulp.task('default', ['clean', 'html', 'img', 'css']);
 
 gulp.task('watch', ['sync'], function(){
-  gulp.watch(int.src + '/assets/style/*.less', ['css']);
+  gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
   gulp.watch('int/src/assets/img/**/*', {cwd:'./'}, ['img']);
   gulp.watch(int.src + '/pages/*.pug', ['html']);
   gulp.watch(int.build + '/*.html').on('change', bs.reload);
