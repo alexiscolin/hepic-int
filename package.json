@@ -24,6 +24,7 @@
     "gulp": "^3.9.1",
     "gulp-cli": "^2.0.1",
     "gulp-csso": "^3.0.1",
+    "gulp-imageoptim": "^1.0.9",
     "gulp-less": "^3.5.0",
     "gulp-pug": "^4.0.1",
     "html-loader": "^0.5.5",

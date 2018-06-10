@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const less = require('gulp-less');
 const minifyCSS = require('gulp-csso');
+const imageOptim = require('gulp-imageoptim');
 const del = require('del');
 const bs = require('browser-sync').create();
 
@@ -28,6 +29,12 @@ gulp.task('css', function(){
     .pipe(bs.reload({stream: true}));
 });
 
+gulp.task('img', function() {
+  return gulp.src(int.src + '/assets/img/**/*')
+    .pipe(imageOptim.optimize())
+    .pipe(gulp.dest(int.build + '/assets/img'));
+});
+
 gulp.task('sync', function() {
   bs.init({
     server: {
@@ -37,10 +44,12 @@ gulp.task('sync', function() {
 });
 
 
-gulp.task('default', ['clean', 'html', 'css']);
+
+gulp.task('default', ['clean', 'html', 'img', 'css']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/*.less', ['css']);
+  gulp.watch('int/src/assets/img/**/*', {cwd:'./'}, ['img']);
   gulp.watch(int.src + '/pages/*.pug', ['html']);
   gulp.watch(int.build + '/*.html').on('change', bs.reload);
 });
