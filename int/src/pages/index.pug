@@ -1,9 +1,8 @@
-doctype html  
-html(lang='en')  
- head
-   title Pug
- body
-   h1 Pug Examples
-   div.container
-     p Cool Pug example!
+extends ../layout/layout.pug
      
+block metadata
+  - var title = "accueil"
+  - var description = "page d'accueil"
+  
+block content
+  h1 bonjour
