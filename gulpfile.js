@@ -29,11 +29,11 @@ gulp.task('css', function(){
 });
 
 gulp.task('sync', function() {
-    bs.init({
-        server: {
-            baseDir: int.build
-        }
-    });
+  bs.init({
+    server: {
+      baseDir: int.build
+    }
+  });
 });
 
 
