@@ -35,6 +35,11 @@ gulp.task('img', function() {
     .pipe(gulp.dest(int.build + '/assets/img'));
 });
 
+gulp.task('fonts', function() {
+   gulp.src(int.src + '/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+   .pipe(gulp.dest(int.build + '/assets/fonts'));
+});
+
 gulp.task('sync', function() {
   bs.init({
     server: {
@@ -45,11 +50,12 @@ gulp.task('sync', function() {
 
 
 
-gulp.task('default', ['clean', 'html', 'img', 'css']);
+gulp.task('default', ['clean', 'html', 'img', 'fonts', 'css']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
   gulp.watch('int/src/assets/img/**/*', {cwd:'./'}, ['img']);
+  gulp.watch('int/src/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}', {cwd:'./'}, ['fonts']);
   gulp.watch(int.src + '/pages/*.pug', ['html']);
   gulp.watch(int.build + '/*.html').on('change', bs.reload);
 });
