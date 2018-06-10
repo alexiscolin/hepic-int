@@ -4,7 +4,8 @@
   "description": "Hepic app repo",
   "main": "index.js",
   "scripts": {
-    "int": "webpack --config int.config.js"
+    "build": "webpack --config app.config.js",
+    "watch": "gulp watch"
   },
   "repository": "https://github.com/alexiscolin/hepic.git",
   "author": "Alexis Colin <nesquimo@gmail.com> (https:www.de-jaune-et-de-bleu.com)",
