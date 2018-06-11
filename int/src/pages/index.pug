@@ -5,8 +5,9 @@ block metadata
   - var description = "page d'accueil"
   
 block content
-  section.o-connect-box
+  section.o-connect-box.p-vcenter-abs
     h1.o-connect-box__logo 
       img(srcset='./assets/img/hepic@2x.png 2x, ./assets/img/hepic@1x.png 1x').full-width
-      
-    a(href='/image.html').o-connect-btn Login with Facebook
+    
+    div.o-connect-btns.f-center
+      a(href='/flux.html').o-connect-btn--fb.o-connect-btn.brad-3.f-white.f-reg.f-center Login with Facebook

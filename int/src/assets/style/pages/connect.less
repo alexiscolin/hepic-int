@@ -1,0 +1,39 @@
+@import "../utils/mixins";
+@import "../utils/var";
+
+.o-connect-box{
+  position: absolute;
+  width: 65%;
+  max-width: 500px;
+  left: 17.5%;
+  top: 50vh;
+}
+
+.o-connect-btns{
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+}
+
+.o-connect-btn{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: .8rem .7rem .7rem 3rem;
+
+  &::before{
+    .mixin-before-abpos();
+    width: 2.8rem;
+    height: 100%;
+    background: url('../img/ico-fb.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: ~"calc(100% -  @{radius-reg} )";
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.o-connect-btn--fb{
+  background: #3c5997;
+}
