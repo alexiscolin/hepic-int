@@ -26,7 +26,7 @@ This project is written using frammeworks and libraries and various preprocessor
 * VueJS
 
 ### Tools
-This project require some Tools
+This project requires some Tools
 
 * WebPack 4 (and CLI)
 * Gulp
