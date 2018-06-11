@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const less = require('gulp-less');
 const minifyCSS = require('gulp-csso');
+const sourcemaps = require('gulp-sourcemaps');
 const imageOptim = require('gulp-imageoptim');
 const del = require('del');
 const bs = require('browser-sync').create();
@@ -23,8 +24,10 @@ gulp.task('html', function(){
 
 gulp.task('css', function(){
   return gulp.src(int.src + '/assets/style/**/*.less')
+    .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(minifyCSS())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(int.build + '/assets/css'))
     .pipe(bs.reload({stream: true}));
 });
