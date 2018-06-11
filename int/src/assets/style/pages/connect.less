@@ -20,6 +20,7 @@
   width: 100%;
   max-width: 300px;
   padding: .8rem .7rem .7rem 3rem;
+  margin: .5rem 0;
 
   &::before{
     .mixin-before-abpos();
@@ -32,8 +33,15 @@
     left: 0;
     bottom: 0;
   }
+
+  &:hover{
+    text-decoration: underline;
+    color: @prim;
+  }
 }
 
-.o-connect-btn--fb{
+.o-connect-btn--fb,
+.o-connect-btn--inst,
+.o-connect-btn--gml{
   background: #3c5997;
 }
