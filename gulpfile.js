@@ -59,6 +59,6 @@ gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
   gulp.watch('int/src/assets/img/**/*', {cwd:'./'}, ['img']);
   gulp.watch('int/src/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}', {cwd:'./'}, ['fonts']);
-  gulp.watch(int.src + '/pages/*.pug', ['html']);
+  gulp.watch(int.src + '/**/*.pug', ['html']);
   gulp.watch(int.build + '/*.html').on('change', bs.reload);
 });
