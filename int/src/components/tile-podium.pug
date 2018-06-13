@@ -11,12 +11,15 @@ mixin tile-podium(brand, desc, gifts)
         span.o-more
         
     .o-tile__pictures
-      a(href="#")
+      a(href="#").p-rel
         img(src="./assets/img/brands/nike/nike-femme.jpg", alt="")
-      a(href="#")
+        .o-ico-sprite.o-ico-sprite--or
+      a(href="#").p-rel
         img(src="./assets/img/brands/nike/nike-blanc.jpg", alt="")
-      a(href="#")
+        .o-ico-sprite.o-ico-sprite--argent
+      a(href="#").p-rel
         img(src="./assets/img/brands/nike/nike-course.jpg", alt="")
+        .o-ico-sprite.o-ico-sprite--bronze
 
     .o-tile__infos--long.p-1.pt-05.pb-05.f-left
       span.f-light.f-lgrey.f-sxs= gifts
