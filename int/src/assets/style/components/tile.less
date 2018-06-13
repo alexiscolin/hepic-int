@@ -1,5 +1,6 @@
 @import "../utils/var";
 @import "../utils/atom";
+@import "../utils/layout";
 
 .o-tile{
   position: relative;
@@ -61,8 +62,17 @@
   img{ width: 100%; }
   a{ display: inline-block; }
 
-  & > a:nth-of-type(1) img{ margin-bottom: @inner-space; }
-  & > a:nth-of-type(2) { margin-right: @inner-space; }
+  & > a:nth-of-type(1){
+    .o-ico-sprite{ &:extend(.o-ico-sprite--or); }
+    img{ margin-bottom: @inner-space; }
+  }
+  & > a:nth-of-type(2) {
+    margin-right: @inner-space;
+    .o-ico-sprite{ &:extend(.o-ico-sprite--argent); }
+  }
+  & > a:nth-of-type(3) {
+    .o-ico-sprite{ &:extend(.o-ico-sprite--bronze); }
+  }
 
   & > a:not(:nth-of-type(1)){
     width: ~"calc(50% - " @inner-space/2 ~")";

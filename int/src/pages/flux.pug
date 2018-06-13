@@ -9,6 +9,23 @@ block metadata
   - var description = "page de flux"
   
 append inner
+  //- IMAGINARIUM CURRENT CONTEST
   +tile-current
-  +tile-podium("Nike", "Shoes contest 2018", "Bons d’achats de 100€, 50€ et 25€")
+  
+  //- NIKE PODIUM
+  - 
+    var nike = { 
+      brand: "nike", 
+      desc: "Shoes contest 2018", 
+      gifts: "Bons d’achats de 100€, 50€ et 25€", 
+      logo: "./assets/img/brands/nike/logo@2x.png",
+      pictures: [
+        "./assets/img/brands/nike/nike-femme.jpg",
+        "./assets/img/brands/nike/nike-blanc.jpg",
+        "./assets/img/brands/nike/nike-course.jpg"
+      ] 
+    }
+  +tile-podium(nike)
+  
+  //- IMAGINARIUM CLOSING CONTEST
   +tile-current
