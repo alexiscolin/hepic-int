@@ -50,6 +50,7 @@ a{
   position: relative;
   @size: 4px;
   display: block;
+  margin-right: @size + 2px;
   width: @size;
   height: @size;
   background: @l-grey;
@@ -68,7 +69,5 @@ a{
     border-radius: @size;
   }
 
-  &:after{
-    right: @size*2 + 6px;
-  }
+  &:after{ right: -@size*2; }
 }
