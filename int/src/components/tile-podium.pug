@@ -1,4 +1,28 @@
-mixin tile-podium
+mixin tile-podium(brand, desc, gifts)
+  article.o-tile.brad-4.shadbox-light
+    .o-tile__infos--long
+      a(href="#").no-link
+        img(src="./assets/img/brands/imaginarium/logo@2x.png" alt="logo").o-tile__logo.b-1.brad-100
+        span= brand
+        span= desc
+        
+      a(href="#").no-link
+        span more
+        
+    .o-tile__pictures
+      a(href="#")
+        img(src="./assets/img/brands/imaginarium/imaginarium-pic.jpg", alt="").full-width
+      a(href="#")
+        img(src="./assets/img/brands/imaginarium/imaginarium-pic.jpg", alt="").full-width
+      a(href="#")
+        img(src="./assets/img/brands/imaginarium/imaginarium-pic.jpg", alt="").full-width
+
+    .o-tile__infos--long
+      span.f-light.f-grey.f-si= gifts
+      
+          
+          
+          
   article.o-tile.brad-4.shadbox-light
     a(href="#").no-link
       img(src="./assets/img/brands/imaginarium/imaginarium-pic.jpg", alt="").full-width
