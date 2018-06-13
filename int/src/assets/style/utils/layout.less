@@ -8,7 +8,7 @@ html{
 body{
   background: @bg;
   font-family: Grotesk;
-  font-weight: @f-bold;
+  font-weight: @f-reg;
   line-height: 1.35;
 }
 
@@ -43,4 +43,32 @@ a{
 .o-svgw-ico{
   display: inline-block;
   width: 100%;
+}
+
+
+.o-more{
+  position: relative;
+  @size: 4px;
+  display: block;
+  width: @size;
+  height: @size;
+  background: @l-grey;
+  border-radius: @size;
+
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: @size + 3px;
+    width: @size;
+    height: @size;
+    background: @l-grey;
+    border-radius: @size;
+  }
+
+  &:after{
+    right: @size*2 + 6px;
+  }
 }
