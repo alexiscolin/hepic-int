@@ -15,7 +15,7 @@ mixin tile(type, brand)
         
         //- affichage infos fin de participation/participation
         case type 
-          when "closing"
+          when "closed"
             .f-bold.f-sfat.f-center.pt-1.pb-05
               | Clotûre des participations
               
@@ -41,7 +41,7 @@ mixin tile(type, brand)
                 span du #{brand.dateStart} <br> au #{brand.dateEnd}
     
     //- bouton de vote -> pas en closing
-    if(type !== "closing")        
+    if(type !== "closed")        
       a(href="#").o-tile__vote.brad-100
         svg(viewBox="0 0 42 42").o-svgw-ico
           use(xlink:href="#ico-vote")

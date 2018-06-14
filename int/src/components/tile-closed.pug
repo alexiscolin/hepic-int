@@ -1,0 +1,22 @@
+mixin tile-closed(type, brand)
+  article.o-tile.brad-4.shadbox-light
+    a(href="#").no-link
+      svg(viewBox="0 0 395.5 240.38").o-tile-closingimg.p-abs.p-init.w-60
+        use(xlink:href="#img-finish")
+          
+      img(src="./assets/img/brands/imaginarium/imaginarium-pic.jpg", alt="").full-width
+      .o-tile__info
+        img(src=brand.logo alt="logo").o-tile__logo.b-10.brad-100
+        h2.o-tile__name.p-hcenter-rel.f-cap.f-st= brand.brand
+        h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= brand.desc
+           
+        .f-bold.f-sfat.f-center.pt-1.pb-05
+          | Clotûre des participations
+          
+        .f-light.pb-1.f-center
+          svg(viewBox="0 0 64.22 62.67").o-tile__ico--inline.pb-05.mr-05.va-mid
+            use(xlink:href="#ico-gift")
+          span.va-mid.f-stl= brand.gifts
+          
+
+            
