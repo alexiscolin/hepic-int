@@ -1,0 +1,43 @@
+extends ../layout/layout.pug
+
+//- ===== COMPONENTS (& olds) =====
+//- include ../components/tile-current.pug 
+//- include ../components/tile-closing.pug 
+//- include ../components/tile-closed.pug 
+
+
+block metadata
+  - var title = "Profil Julie"
+  - var description = "page de profil"
+  
+append inner
+
+  include ../layout/data.pug
+  
+  .o-profil-infos
+    a(href="#")
+      | back
+    div
+      img(src="#")
+      span Julie
+      span julie.ldf
+    
+    button(value="config", type="button") config
+    
+  section.o-profil-pics 
+    <div class="container" style="display: flex;flex-wrap: wrap;">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/800/800/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/200/500/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/200/200/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/100/300/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/400/400/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/300/200/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/400/500/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/300/250/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/650/250/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/200/150/">
+      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/400/350/">
+    </div>
+      
+  
+  
