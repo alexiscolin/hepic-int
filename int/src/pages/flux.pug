@@ -2,7 +2,7 @@ extends ../layout/layout.pug
 
 //- components (& olds)
 //- include ../components/tile-current.pug 
-include ../components/tile-closing.pug 
+//- include ../components/tile-closing.pug 
 //- include ../components/tile-closed.pug 
 include ../components/tile-podium.pug 
 include ../components/tile.pug
@@ -12,32 +12,13 @@ block metadata
   - var description = "page de flux"
   
 append inner
+
+  include ../layout/data.pug
+  
   //- IMAGINARIUM CURRENT CONTEST
-  - 
-    var imaginarium = { 
-      brand: "Imaginarium festival", 
-      desc: "Dance photo contest",
-      target: "Vous au festival !", 
-      gifts: "Chèques Cadeaux 100€, 50€, 30€",
-      dateStart: "01/02/18",
-      dateEnd: "30/03/18",
-      logo: "./assets/img/brands/imaginarium/logo@2x.png",
-    }
   +tile('current', imaginarium)
   
   //- NIKE PODIUM
-  - 
-    var nike = { 
-      brand: "nike", 
-      desc: "Shoes contest 2018", 
-      gifts: "Bons d’achats de 100€, 50€ et 25€", 
-      logo: "./assets/img/brands/nike/logo@2x.png",
-      pictures: [
-        "./assets/img/brands/nike/nike-femme.jpg",
-        "./assets/img/brands/nike/nike-blanc.jpg",
-        "./assets/img/brands/nike/nike-course.jpg"
-      ] 
-    }
   +tile-podium(nike)
   
   //- IMAGINARIUM CLOSING CONTEST
