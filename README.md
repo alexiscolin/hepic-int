@@ -21,8 +21,8 @@ this project is spread between `int` and `app` folder. `int` folder covers integ
 ### Frameworks & preprocessors
 This project is written using frammeworks and libraries and various preprocessors for HTML, JS and CSS
 
-* LESS
-* PUG/Jade
+* LESS (Atomic CSS - BEM style)
+* PUG/Jade (Web Components OOP)
 * VueJS
 
 ### Tools
