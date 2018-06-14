@@ -20,7 +20,9 @@ mixin tile-current(type, brand)
           li.p-hcenter-rel.d-flex-eq.f-light.f-si 
             svg(viewBox="0 0 60.09 60.09").o-tile__ico
               use(xlink:href="#ico-clock")
-            span du #{brand.dateStart} <br> au #{brand.dateEnd}
+            div
+              div du #{brand.dateStart}
+              div au #{brand.dateEnd}
             
     a(href="#").o-tile__vote.brad-100
       svg(viewBox="0 0 42 42").o-svgw-ico

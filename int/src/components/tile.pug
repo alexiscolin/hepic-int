@@ -38,7 +38,9 @@ mixin tile(type, brand)
               li.p-hcenter-rel.d-flex-eq.f-light.f-si 
                 svg(viewBox="0 0 60.09 60.09").o-tile__ico
                   use(xlink:href="#ico-clock")
-                span du #{brand.dateStart} <br> au #{brand.dateEnd}
+                div
+                  div du #{brand.dateStart}
+                  div au #{brand.dateEnd}
     
     //- bouton de vote -> pas en closing
     if(type !== "closed")        
