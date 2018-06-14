@@ -101,14 +101,24 @@ button{
     background-image: url('../img/sprite@2x.png');
   }
 }
-.o-ico-sprite--or{
-  background-position: 0 2px;
+.o-ico-sprite--or{ background-position: 1% 55%; }
+.o-ico-sprite--argent{ background-position: 49% 55%; }
+.o-ico-sprite--bronze{ background-position: 96% 55%; }
+
+.o-ico-sprite--little{
+  @size: 1rem;
+  border: 2px solid white;
+  width: @size;
+  height: @size;
+  background-size: auto @size - .11em;
+
+  // &.o-ico-sprite--or{ background-position: 0 1px; }
+  // &.o-ico-sprite--argent{ background-position: 48% 1px; }
+  // &.o-ico-sprite--bronze{ background-position: 96px 1px; }
 }
-.o-ico-sprite--argent{
-  background-position: -22px 2px;
-}
-.o-ico-sprite--bronze{
-    background-position: -44px 2px;
+
+.o-ico-sprite--num{
+  background: @bg;
 }
 
 //------- ICO BUTTON -------
