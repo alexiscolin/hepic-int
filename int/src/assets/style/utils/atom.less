@@ -88,6 +88,7 @@
 
 // ----- DISPLAY -----
 // flex
+.d-flex{ display: flex; }
 .d-col-flex{
   display: flex;
   flex-direction: column;
@@ -116,19 +117,27 @@
 
 // ----- PADDINGS -------
 //
-.p-1{ padding: @space ;}
+.m-025{ margin: @space / 4; }
+
+.p-05{ padding: @space / 2;}
+.m-05{ margin: @space / 2; }
 .pt-05{ padding-top: @space / 2; }
 .pb-05{ padding-bottom: @space / 2; }
 .pr-05{ padding-right: @space / 2; }
+.pl-05{ padding-left: @space / 2; }
 .mr-05{ margin-right: @space / 2; }
 
+.p-1{ padding: @space ;}
+.m-1{ margin: @space; }
 .pt-1{ padding-top: @space ; }
 .pr-1{ padding-right: @space ; }
 .pl-1{ padding-left: @space ; }
 .pb-1{ padding-bottom: @space; }
+.mb-1{ margin-bottom: @space; }
 
 .pr-2{ padding-right: @space * 2; }
 .pl-2{ padding-left: @space * 2; }
+.mb-2{ margin-bottom: @space * 2; }
 
 .shadbox-light{
   box-shadow: 0 0 4px rgba(0,0,0, .35);

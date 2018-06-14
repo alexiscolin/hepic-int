@@ -14,30 +14,25 @@ append inner
 
   include ../layout/data.pug
   
-  .o-profil-infos
-    a(href="#")
-      | back
-    div
-      img(src="#")
-      span Julie
-      span julie.ldf
+  .o-profil-.d-row-flex.d-flex-spacebet.d-flex-vm.mb-2
+    a(href="/flux.html")
+      svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+        use(xlink:href="#ico-arrow")
+          
+    div.d-row-flex.d-flex-vm
+      img(src=profil.portrait).o-profil-pic.brad-100
+      span.pl-1.f-bold.f-stm= profil.name
+      span.pl-05.f-grey= profil.id
     
-    button(value="config", type="button") config
+    button(value="config", type="button")
+      svg(viewBox="0 0 35.37 35.35").o-svg-btn.va-mid
+        use(xlink:href="#ico-config") 
     
-  section.o-profil-pics 
-    <div class="container" style="display: flex;flex-wrap: wrap;">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/800/800/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/200/500/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/200/200/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/100/300/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/400/400/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/300/200/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/400/500/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/300/250/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/650/250/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/200/150/">
-      <img style="max-height: 200px; flex:1;" src="https://lorempixel.com/400/350/">
-    </div>
+  section.o-profil-pics.d-flex
+    each pic in profil.images
+      a(href="#" class={"o-profil-pics__img--large": pic.rank === "gold"}).o-profil-pics__img.m-025
+        img(src=pic.image)
+    
       
   
   

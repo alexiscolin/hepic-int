@@ -1,0 +1,48 @@
+@import "../utils/var";
+
+.o-profil-pic{
+  width: 15vw;
+}
+
+.o-profil-pics{
+  flex-wrap: wrap;
+}
+
+// https://guoyunhe.me/demo/flexbin/ -> grid
+.o-profil-pics__img{
+  @height: 150px;
+  position: relative;
+  display: block;
+  height: @height;
+  width: ~"calc(50% - " @space / 2 ~")";
+  flex-grow: 1;
+
+  @media (min-width: 500px){
+    width: auto;
+  }
+
+  & > img{
+    height: @height;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+
+    @media (min-width: 500px){
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+.o-profil-pics__img--large{
+  @height: 240px;
+  width: 100%;
+  height: @height;
+
+  & > img{
+    height: @height;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
