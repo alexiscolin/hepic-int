@@ -1,4 +1,4 @@
-mixin tile(type, brand)
+mixin tile(type, brand, state)
   article.o-tile.brad-4.shadbox-light
     a(href="#").no-link
     
@@ -36,11 +36,12 @@ mixin tile(type, brand)
                 span= brand.gifts 
                 
               li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-                svg(viewBox="0 0 60.09 60.09").o-tile__ico
+                //- state === "closing" -> pour tile de style fermeture imminente
+                svg(viewBox="0 0 60.09 60.09" class={"cf-orange": state === "closing"}).o-tile__ico
                   use(xlink:href="#ico-clock")
                 div
-                  div du #{brand.dateStart}
-                  div au #{brand.dateEnd}
+                  div(class={"c-grad-yo": state === "closing"}) du #{brand.dateStart}
+                  div(class={"c-grad-yo f-stl": state === "closing"}) au #{brand.dateEnd}
     
     //- bouton de vote -> pas en closing
     if(type !== "closed")        
