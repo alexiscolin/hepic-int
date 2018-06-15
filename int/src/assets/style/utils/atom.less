@@ -142,8 +142,32 @@
 
 .pr-2{ padding-right: @space * 2; }
 .pl-2{ padding-left: @space * 2; }
+.mt-2{ margin-top: @space * 2; }
 .mb-2{ margin-bottom: @space * 2; }
 
 .shadbox-light{
   box-shadow: 0 0 4px rgba(0,0,0, .35);
+}
+
+
+// ----- SEPARATIONS -------
+//
+.sep-bef{
+  position: inherit;
+
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: -@space/2;
+    background: @b-grey;
+  }
+
+  &:after{
+    top: ~"calc(100% + " @space/2 ~")";
+  }
 }
