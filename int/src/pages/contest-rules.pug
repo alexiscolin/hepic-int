@@ -1,0 +1,40 @@
+extends ../layout/layout.pug
+
+block metadata
+  - var title = "Concours"
+  - var description = "page de concours"
+  
+append inner
+
+  include ../layout/data.pug 
+  include contest.pug
+  
+  div.o-layer
+    section.o-popin
+      .o-tile__infos--long.pl-2.pr-2.pt-2.pb-05.sep-aft
+        .p-rel.d-row-flex.d-flex-spacebet.d-flex-vm.w-100.sep-aft
+          .d-row-flex.d-flex-spacebet.d-flex-vm
+            img(src=brand.logo alt="logo").o-tile__logo--long.b-1.brad-100
+            span.va-mid
+              span.pl-1.f-stm.pr-05.f-bold= brand.brand
+              span.f-cap.f-stl.f-lgrey.f-reg= brand.desc
+            
+      .o-popin-ovrflw.pl-2.pr-2.mt-2
+        h3.p-rel.pt-2.f-stl.f-reg Règlement complet
+        p.pt-1.f-grey On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. <br><br>Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat.On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...On sectetuer adiUt wisi enim ad minim veniam tion ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...inim veniam <br><br>Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat llamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ....
+
+      .f-center.f-bold
+        | ...
+          
+      .pl-2.pr-2.mt-2
+        input(type="checkbox" name="validRules")#validrules.mr-05
+        label(for="validrules") J’accepte les conditions d’utilisation
+        
+      div.d-col-flex.mt-1.pr-4.pl-4
+        a(href="#").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
+      
+      a(href="#").d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it annuler
+
+      
+      
+          
