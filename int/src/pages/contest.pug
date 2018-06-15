@@ -1,0 +1,43 @@
+extends ../layout/layout.pug
+
+block metadata
+  - var title = "Concours"
+  - var description = "page de concours"
+  
+append inner
+
+  include ../layout/data.pug
+  
+  .w-full
+    img(src="")
+      
+  .o-tile__info
+    img(src="" alt="logo").o-tile__logo.b-10.brad-100
+    h2.o-tile__name.p-hcenter-rel.f-cap.f-st= Nike
+    h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= test
+    p Pour les 50 ans de la marque, un grand concours axé sur les sneakers Nike est organisé. Que le meilleur gagne !
+    
+  ul.d-row-flex.no-list
+    li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+      svg(viewBox="0 0 62.37 62.37").o-tile__ico
+        use(xlink:href="#ico-cible")
+      span Photo : <br> Vous au festival !
+    li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
+      svg(viewBox="0 0 64.22 62.67").o-tile__ico
+        use(xlink:href="#ico-gift")
+      span Chèques Cadeaux 100€, 50€, 30€
+        
+    li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+      svg(viewBox="0 0 60.09 60.09" ).o-tile__ico
+        use(xlink:href="#ico-clock")
+      div
+        div du 04/05/2018
+        div au 20/05/2018
+        
+  div
+    a(href="#") participer
+    a(href="#") Voter
+    
+  div
+    p
+    | Règlement complet On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat.On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...On sectetuer adiUt wisi enim ad minim veniam tion ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...inim veniam Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat llamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ....
