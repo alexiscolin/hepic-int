@@ -129,3 +129,75 @@ button{
   width: @ico-width;
   height: @ico-width;
 }
+
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+//------- CHECK BUTTON -------
+// --------------------------
+//
+//
+//
+.o-checkbox{
+  opacity: 0;
+  position: absolute;
+}
+
+.o-checkbox, .o-checkbox-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.o-checkbox-label{ position: relative; }
+
+.o-checkbox + .o-checkbox-label:before {
+  content: '';
+  background: #fff;
+  border: 1px solid @fg;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.o-checkbox:checked + .o-checkbox-label:before {
+  background: @fg;
+  box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+.o-checkbox:focus + .o-checkbox-label {
+  outline: 1px solid #ddd; /* focus style */
+}
