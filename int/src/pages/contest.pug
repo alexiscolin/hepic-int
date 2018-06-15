@@ -8,33 +8,37 @@ append inner
 
   include ../layout/data.pug
   
+  //- brand target
+  - var brand = nike;
+  
   main.c-backbg.pb-1
     .w-full
-      img(src="./assets/img/brands/nike/nike-femme.jpg").o-contest-img
+      img(src=brand.couv).o-contest-img
       
     .pl-1.pr-1  
       .o-tile__info
-        img(src=nike.logo alt="logo").o-tile__logo.b-10.brad-100
-        h2.o-tile__name.p-hcenter-rel.f-cap.f-st= nike.brand
-        h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= nike.desc
-        p.mt-2.f-center.sep-bef.sep-aft= nike.infos 
+        img(src=brand.logo alt="logo").o-tile__logo.b-10.brad-100
+        h2.o-tile__name.p-hcenter-rel.f-cap.f-st= brand.brand
+        h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= brand.desc
+        p.mt-2.f-center.pl-05.pr-05.sep-bef.sep-aft= brand.infos 
       
-    ul.d-row-flex.no-list
-      li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-        svg(viewBox="0 0 62.37 62.37").o-tile__ico
-          use(xlink:href="#ico-cible")
-        span Photo : <br> Vous au festival !
-      li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
-        svg(viewBox="0 0 64.22 62.67").o-tile__ico
-          use(xlink:href="#ico-gift")
-        span= nike.gifts
-          
-      li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-        svg(viewBox="0 0 60.09 60.09" ).o-tile__ico
-          use(xlink:href="#ico-clock")
-        div
-          div du 04/05/2018
-          div au 20/05/2018
+    .pl-2.pr-2.pt-1
+      ul.d-row-flex.no-list.b-reg.brad-6
+        li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+          svg(viewBox="0 0 62.37 62.37").o-tile__ico
+            use(xlink:href="#ico-cible")
+          span Photo : <br> #{brand.target}
+        li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
+          svg(viewBox="0 0 64.22 62.67").o-tile__ico
+            use(xlink:href="#ico-gift")
+          span= brand.gifts
+            
+        li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+          svg(viewBox="0 0 60.09 60.09" ).o-tile__ico
+            use(xlink:href="#ico-clock")
+          div
+            div= brand.dateStart
+            div= brand.dateEnd
           
     div
       a(href="#") participer
