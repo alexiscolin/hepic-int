@@ -15,14 +15,16 @@ append inner
 
   include ../layout/data.pug
   
-  //- IMAGINARIUM CURRENT CONTEST
-  +tile('current', imaginarium)
+  main.o-main.pl-1.pr-1.pb-1
   
-  //- NIKE PODIUM
-  +tile-podium(nike)
-  
-  //- IMAGINARIUM CLOSING CONTEST
-  +tile('current', imaginarium, 'closing')
-  
-  //- IMAGINARIUM CLOSED CONTEST
-  +tile('closed', imaginarium)
+    //- IMAGINARIUM CURRENT CONTEST
+    +tile('current', imaginarium)
+    
+    //- NIKE PODIUM
+    +tile-podium(nike)
+    
+    //- IMAGINARIUM CLOSING CONTEST
+    +tile('current', imaginarium, 'closing')
+    
+    //- IMAGINARIUM CLOSED CONTEST
+    +tile('closed', imaginarium)
