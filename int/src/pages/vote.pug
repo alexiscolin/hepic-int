@@ -1,0 +1,24 @@
+extends ../layout/layout.pug
+
+block metadata
+  - var title = "Vote"
+  - var description = "page de vote"
+  
+append inner
+
+  include ../layout/data.pug
+  
+  main.o-main.pl-1.pr-1.pb-1
+    a(href="/flux.html").p-abs.d-block.mt-6.cf-grey
+      svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+        use(xlink:href="#ico-arrow")
+          
+    .o-profil-.d-row-flex.d-flex-spacebet.d-flex-vm.mb-2
+      
+            
+      div.d-row-flex.d-flex-vm
+        img(src=profil.portrait).o-profil-pic.brad-100
+        span.pl-1.f-bold.f-stm= profil.name
+        span.pl-05.f-grey= profil.id
+      
+  
