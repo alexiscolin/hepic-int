@@ -1,4 +1,5 @@
 @import "./var.less";
+@import "./atom.less";
 
 
 html{
@@ -163,6 +164,18 @@ button{
     padding: 2px;
     margin-right: 10px;
     text-align: center;
+}
+
+
+//------- BACK BUTTON -------
+// --------------------------
+//
+
+.o-back{
+  position: absolute;
+  display: flex;
+  &:extend(.cf-grey);
+  &:extend(.d-flex-vm);
 }
 
 
