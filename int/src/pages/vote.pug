@@ -8,17 +8,36 @@ append inner
 
   include ../layout/data.pug
   
-  main.o-main.pl-1.pr-1.pb-1
-    a(href="/flux.html").o-title.o-back
+  - var brand = clubmed;
+  
+  main.o-main.pb-1
+    a(href="/flux.html").o-title.o-back.pl-1
       svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
         use(xlink:href="#ico-arrow")
           
-    .o-profil-.d-row-flex.f-center.d-flex-vm.mb-2
-      
-            
+    .d-row-flex.f-center.d-flex-vm.d-flex-hm.mb-2    
       div.d-row-flex.d-flex-vm
-        img(src=profil.portrait).o-profil-pic.brad-100
-        span.pl-1.f-bold.f-stm= profil.name
-        span.pl-05.f-grey= profil.id
+        a(href="#")
+          img(src=brand.logo).o-profil-pic.p-hcenter-rel.b-reg.d-block.brad-100
+          h2.d-block.m-025.mb-0.f-bold.f-stm= brand.brand
+          span.d-block.pl-05.f-grey= brand.desc
+          span.d-block.f-si.f-grey Voir la page du concours
+          
+    .d-row-flex.pl-1.pr-1
+      span n°1
+      a(href="#").no-link
+        span.o-more 
+        
+    div
+      img(src="./assets/img/brands/nike/nike-femme.jpg").w-100
+    
+    .d-row-flex.pl-1.pr-1
+      p précédent
+      a(href="#") 
+        | vote
+      p suivant
+      
+        
+    
       
   
