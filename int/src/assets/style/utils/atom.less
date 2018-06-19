@@ -87,9 +87,9 @@
 // ----- BORDER -----
 //
 
-.b-reg{
-  border: solid @l-grey @space / 10;
-}
+.b-reg{ border: solid @l-grey @space / 10; }
+.b-regFg{ border: solid @fg @space / 10; }
+
 
 .brad-2{ border-radius: @radius-reg; }
 .brad-4{ border-radius: @radius-reg * 2; }
@@ -160,7 +160,9 @@
 //
 .w-100{ width: 100%; }
 .w-60{ width: 60%; }
+.w-30{ width: 30%; }
 .h-100{ height: 100%; }
+.hmin-100{ min-height: 100vh; }
 
 // ----- PADDINGS -------
 //
@@ -214,4 +216,11 @@
 
 .shadbox-light{
   box-shadow: 0 0 4px rgba(0,0,0, .35);
+}
+
+// ----- TRANSFORM -----
+//
+.trotZ-180{
+  transform: rotate(180deg);
+  transform-origin: center;
 }
