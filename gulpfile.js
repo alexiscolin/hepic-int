@@ -51,7 +51,7 @@ gulp.task('fonts', function() {
    .pipe(gulp.dest(int.build + '/assets/fonts'));
 });
 
-gulp.task('critical', function() {
+gulp.task('critical', ['html','cssProd'], function() {
   return  gulp.src(int.build + '/*.html')
     .pipe(critical({
       base: int.build,
