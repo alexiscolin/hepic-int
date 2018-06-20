@@ -1,0 +1,21 @@
+mixin popinVote(state)
+
+  case state 
+    //- cas 1 : on valide la popin de vote
+    when "validation"
+      section.o-popin.c-backtrans
+        a(href="./vote-confirmation.html").o-popin-caption.no-link.d-block.p-hcenter-rel.p-1.brad-4
+          span.f-bold.f-sfat.c-grad-yo Valider le vote
+          
+        a(href="./vote.html").no-link.d-block.p-hcenter-rel.mt-6.f-dec-it.f-white
+          | annuler
+      
+    when "confirmation"
+      //- cas 2 : on est notifié de la confirmation de vote sur la popin
+      section.o-popin.c-backtrans
+        .o-popin-caption.no-link.d-block.p-hcenter-rel.p-1.brad-4
+          span.f-bold.f-sfat.f-green Vote comptabilisé !
+          
+        a(href="./flux.html").no-link.d-block.p-hcenter-rel.mt-6.f-dec-it.f-white
+          | retour au flux
+     

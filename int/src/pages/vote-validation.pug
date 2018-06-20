@@ -1,0 +1,12 @@
+extends ../pages/vote.pug
+include ../components/popin-vote.pug
+
+
+block metadata
+  - var title = "Vote"
+  - var description = "page de vote"
+  
+  include vote.pug
+
+  div.o-layer
+    +popinVote('validation') 
