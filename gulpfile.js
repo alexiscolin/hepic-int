@@ -5,6 +5,7 @@ const minifyCSS = require('gulp-csso');
 const sourcemaps = require('gulp-sourcemaps');
 const imageOptim = require('gulp-imageoptim');
 const del = require('del');
+const critical = require('critical').stream;
 const bs = require('browser-sync').create();
 
 const int = {
@@ -50,6 +51,18 @@ gulp.task('fonts', function() {
    .pipe(gulp.dest(int.build + '/assets/fonts'));
 });
 
+gulp.task('critical', function() {
+  return  gulp.src(int.build + '/*.html')
+    .pipe(critical({
+      base: int.build,
+      inline: true,
+      width: 320,
+      height: 480,
+      minify: true
+    }))
+    .pipe(gulp.dest(int.build));
+});
+
 gulp.task('sync', function() {
   bs.init({
     server: {
@@ -61,7 +74,7 @@ gulp.task('sync', function() {
 
 
 gulp.task('default', ['clean', 'html', 'img', 'fonts', 'css']);
-gulp.task('build', ['clean', 'html', 'img', 'fonts', 'cssProd']);
+gulp.task('build', ['clean', 'html', 'cssProd', 'img', 'fonts', 'critical']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
