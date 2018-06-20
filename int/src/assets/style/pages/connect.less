@@ -44,19 +44,24 @@
   background: #3c5997;
 }
 
+.connect-ico-mixin(@url){
+  background-image: url( @url );
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
+}
+
 .o-connect-btn--tw{
   background: #1da0f1;
-
-  &::before{
-    background: url('../img/ico-tw.svg');
-
-  }
+  &::before{ .connect-ico-mixin('../img/ico-tw.svg'); }
 }
 
 .o-connect-btn--gml{
    background: #de4a32;
+   &::before{ .connect-ico-mixin('../img/ico-gml.svg'); }
 }
 
 .o-connect-btn--inst{
   background: linear-gradient(to right, #fe6a39, #ef52c1);
+  &::before{ .connect-ico-mixin('../img/ico-insta.svg'); }
 }
