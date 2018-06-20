@@ -10,5 +10,5 @@ block content
       img(srcset='./assets/img/hepic@2x.png 2x, ./assets/img/hepic@1x.png 1x', alt='Hepic').full-width
     
     .o-connect-btns.f-center
-      each rs in [{dim: 'fb', rname: 'Facebook'}, {dim: 'inst', rname: 'Instagram'}, {dim: 'gml', rname: 'Gmail'}]
+      each rs in [{dim: 'fb', rname: 'Facebook'}, {dim: 'tw', rname: 'Twitter'}, {dim: 'gml', rname: 'Gmail'}, {dim: 'inst', rname: 'Instagram'}]
         a(href='/flux.html', class='o-connect-btn--'+rs.dim+' o-connect-btn brad-2 f-white f-reg f-center')= 'Login with ' + rs.rname       
