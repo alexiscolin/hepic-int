@@ -3,7 +3,7 @@ mixin tile(type, brand, state)
     a(href="./contest.html").no-link
     
       //- affichage damier
-      if(type === "closing")
+      if(type === "closed")
         svg(viewBox="0 0 395.5 240.38").o-tile-closingimg.p-abs.p-init.w-60
           use(xlink:href="#img-finish")
           
