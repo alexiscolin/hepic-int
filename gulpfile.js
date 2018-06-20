@@ -32,6 +32,13 @@ gulp.task('css', function(){
     .pipe(bs.reload({stream: true}));
 });
 
+gulp.task('cssProd', function(){
+  return gulp.src(int.src + '/assets/style/**/*.less')
+    .pipe(less())
+    .pipe(minifyCSS())
+    .pipe(gulp.dest(int.build + '/assets/css'))
+});
+
 gulp.task('img', function() {
   return gulp.src(int.src + '/assets/img/**/*')
     .pipe(imageOptim.optimize())
@@ -54,6 +61,7 @@ gulp.task('sync', function() {
 
 
 gulp.task('default', ['clean', 'html', 'img', 'fonts', 'css']);
+gulp.task('build', ['clean', 'html', 'img', 'fonts', 'cssProd']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
