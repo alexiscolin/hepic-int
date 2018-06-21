@@ -7,6 +7,9 @@ const imageOptim = require('gulp-imageoptim');
 const del = require('del');
 const critical = require('critical').stream;
 const bs = require('browser-sync').create();
+const gulpsourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 
 const int = {
   build: "./int/build",
@@ -22,6 +25,19 @@ gulp.task('html', function(){
     .pipe(pug())
     .pipe(gulp.dest(int.build))
 });
+
+gulp.task('js', function(){
+  gulp.src(int.src + '/assets/js/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+        presets: ['env']
+    }))
+    .pipe(concat('index.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(int.build + '/assets/js'))
+    .pipe(bs.reload({stream: true}));
+  }
+);
 
 gulp.task('css', function(){
   return gulp.src(int.src + '/assets/style/**/*.less')
@@ -73,11 +89,12 @@ gulp.task('sync', function() {
 
 
 
-gulp.task('default', ['clean', 'html', 'img', 'fonts', 'css']);
-gulp.task('build', ['clean', 'html', 'cssProd', 'img', 'fonts', 'critical']);
+gulp.task('default', ['clean', 'html', 'img', 'js', 'fonts', 'css']);
+gulp.task('build', ['clean', 'html', 'js', 'cssProd', 'img', 'fonts', 'critical']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
+  gulp.watch(int.src + '/assets/js/**/*.js', ['js']);
   gulp.watch('int/src/assets/img/**/*', {cwd:'./'}, ['img']);
   gulp.watch('int/src/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}', {cwd:'./'}, ['fonts']);
   gulp.watch(int.src + '/**/*.pug', ['html']);
