@@ -1,7 +1,9 @@
+'use strict';
+
 console.log('hello');
 
 var elem = document.querySelector('.o-grid');
-var msnry = new Masonry( elem, {
+var msnry = new Masonry(elem, {
   // options
   itemSelector: '.o-tile-grided',
   columnWidth: 200
@@ -12,3 +14,4 @@ var msnry = new Masonry( elem, {
 // var msnry = new Masonry( '.grid', {
 //   // options
 // })
+//# sourceMappingURL=index.js.map
