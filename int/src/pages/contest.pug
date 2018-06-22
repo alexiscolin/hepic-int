@@ -19,42 +19,43 @@ append inner
       svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
         use(xlink:href="#ico-arrow")
       
-    .pl-2.pr-2  
-      .o-tile__info
-        img(src=brand.logo alt="logo").o-tile__logo.b-10.brad-100
-        h2.o-tile__name.p-hcenter-rel.f-cap.f-st= brand.brand
-        h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= brand.desc
-      
-    //- block a changer dans validation et info
-    block contestContent
+    .o-main__container
       .pl-2.pr-2  
-        p.p-rel.mt-3.f-center.pl-05.pr-05.sep-bef.sep-aft= brand.infos 
-
-      .pl-1.pr-1.pt-2
-        ul.d-row-flex.no-list.b-reg.brad-6
-          li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-            svg(viewBox="0 0 62.37 62.37").o-tile__ico
-              use(xlink:href="#ico-cible")
-            span Photo : <br> #{brand.target}
-          li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
-            svg(viewBox="0 0 64.22 62.67").o-tile__ico
-              use(xlink:href="#ico-gift")
-            span= brand.gifts
-              
-          li.p-hcenter-rel.d-flex-eq.f-light.f-si 
-            svg(viewBox="0 0 60.09 60.09" ).o-tile__ico
-              use(xlink:href="#ico-clock")
-            div
-              div= brand.dateStart
-              div= brand.dateEnd
-            
-      div.d-col-flex.mt-2.pr-4.pl-4
-        a(href="contest-rules.html").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
-        a(href="#").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
-          svg(viewBox="0 0 42 42").mt-neg025.o-svgh-ico.o-svg-btn.mr-05.va-mid
-            use(xlink:href="#ico-vote")
-          span Voter
+        .o-tile__info
+          img(src=brand.logo alt="logo").o-tile__logo.b-10.brad-100
+          h2.o-tile__name.p-hcenter-rel.f-cap.f-st= brand.brand
+          h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= brand.desc
         
-      div.pl-4.pr-4.mt-4
-        h3.p-rel.sep-bef.f-stl.f-reg Règlement complet
-        p.pt-1.f-grey On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. <br><br>Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat.On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...On sectetuer adiUt wisi enim ad minim veniam tion ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...inim veniam <br><br>Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat llamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ....
+      //- block a changer dans validation et info
+      block contestContent
+        .pl-2.pr-2  
+          p.p-rel.mt-3.f-center.pl-05.pr-05.sep-bef.sep-aft.f-stl= brand.infos 
+
+        .pl-1.pr-1.pt-2
+          ul.d-row-flex.no-list.b-reg.brad-6
+            li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+              svg(viewBox="0 0 62.37 62.37").o-tile__ico.o-tile__ico--large
+                use(xlink:href="#ico-cible")
+              span Photo : <br> #{brand.target}
+            li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
+              svg(viewBox="0 0 64.22 62.67").o-tile__ico.o-tile__ico--large
+                use(xlink:href="#ico-gift")
+              span= brand.gifts
+                
+            li.p-hcenter-rel.d-flex-eq.f-light.f-si 
+              svg(viewBox="0 0 60.09 60.09" ).o-tile__ico.o-tile__ico--large
+                use(xlink:href="#ico-clock")
+              div
+                div= brand.dateStart
+                div= brand.dateEnd
+              
+        div.d-col-flex.mt-2.pr-4.pl-4
+          a(href="contest-rules.html").f-bold.f-sfat.pt-05.pb-05.f-center.c-grad-yo.shadbox-light.brad-4 Participer
+          a(href="#").no-link.f-center.shadbox-light.pt-1.pb-1.mt-1.brad-4 
+            svg(viewBox="0 0 42 42").mt-neg025.o-svgh-ico.o-svg-btn.mr-05.va-mid
+              use(xlink:href="#ico-vote")
+            span Voter
+          
+        div.pl-4.pr-4.mt-4
+          h3.p-rel.sep-bef.f-stl.f-reg Règlement complet
+          p.pt-1.f-grey.f-stl On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. <br><br>Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat.On sectetuer adipiscing elit ! Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...On sectetuer adiUt wisi enim ad minim veniam tion ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ...inim veniam <br><br>Tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat llamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. incidunt ut laoreet dolore magna aliquam erat volutpat uam erat volutp  atuam erat volutpat ....

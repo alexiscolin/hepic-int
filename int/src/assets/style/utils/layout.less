@@ -11,6 +11,7 @@ body{
   font-family: Grotesk;
   font-weight: @f-reg;
   line-height: 1.35;
+  font-size: .8rem;
   color: @b-grey;
 }
 
@@ -39,6 +40,13 @@ button{
   max-width: 1250px;
   margin: 0 auto;
 }
+
+.o-main__container{
+  @media (min-width: @tab){
+      padding: 0 @space * 6;
+  }
+}
+
 .o-title{ height: @space-h-unit * 2; }
 
 .o-plain-img{
