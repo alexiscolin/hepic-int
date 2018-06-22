@@ -7,4 +7,23 @@
   width: 100%;
   background: @dark-grad;
   z-index: -1;
+
+  @media (min-width: @tab){
+    &::before{
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: @space * 2;
+      right: @space * 2;
+      width: 15vw;
+      height: 15vh;
+      max-width: 500px;
+      background: no-repeat center / contain url('../img/hepic@1x.png');
+      z-index: 1;
+
+      @media only screen and (-webkit-min-device-pixel-ratio: @px-ratio), only screen and (min-device-pixel-ratio: @px-ratio){
+        background: no-repeat center / contain url('../img/hepic@2x.png');
+      }
+    }
+  }
 }
