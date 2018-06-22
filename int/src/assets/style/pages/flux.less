@@ -1,46 +1,47 @@
-// /* Box-sizing reset: http://w3bits.com/?p=3225 */
-// html {
-//   box-sizing: border-box;
-// }
-//
-// *,
-// *:before,
-// *:after {
-//   box-sizing: inherit;
-// }
-//
-// /* The Masonry Container */
+
 .o-grid{
   margin: 0 auto;
 
 }
 //
 // /* The Masonry Brick */
-.o-tile-grided {
-  width: 100%;
+// .o-tile-grided {
+//   width: 100%;
+//
+//   @media (min-width: 769px){ width: 30%; }
+//
+// }
 
-  @media (min-width: 769px){ width: 30%; }
 
+
+/* with flexbox */
+.o-grid {
+  display: flex;
 }
-//
-// /* Masonry on large screens */
-// @media only screen and (min-width: 1024px) {
-//   .o-grid{
-//     max-width: 80vw;
-//     column-count: 3;
-//   }
-// }
-//
-// /* Masonry on medium-sized screens */
-// @media only screen and (max-width: 1023px) and (min-width: 768px) {
-//   .o-grid{
-//     column-count: 3;
-//   }
-// }
-//
-// /* Masonry on small screens */
-// @media only screen and (max-width: 767px) and (min-width: 540px) {
-//   .o-grid{
-//     column-count: 2;
-//   }
-// }
+
+.grid-col {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* 2 columns by default, hide columns 2 & 3 */
+.grid-col--2, .grid-col--3 { display: none }
+.grid-col--3 { margin-right: 0; }
+
+/* 3 columns at medium size */
+@media ( min-width: 768px ) {
+  .grid-col{ margin-right: 2%; }
+  .grid-col--2 {
+    display: block;
+    margin-right: 0;
+  } /* show column 2 */
+}
+
+/* 4 columns at large size */
+@media ( min-width: 1080px ) {
+  .grid-col--2{ margin-right: 2%; }
+  .grid-col--3 {
+    display: block;
+    margin-right: 0;
+  } /* show column 3 */
+}
