@@ -67,12 +67,24 @@
 .f-light{ font-weight: @f-light; }
 .f-bold{ font-weight: @f-bold; }
 
-.f-sfat{ font-size: 1.8rem; }
-.f-st{ font-size: 1.4rem; }
-.f-stm{ font-size: 1.2rem; }
-.f-stl{ font-size: 1rem; }
-.f-si{ font-size: .8rem; }
-.f-sxs{ font-size: .7rem; }
+.f-sfat{ font-size: 1.8rem;
+  @media (min-width: 769px){ font-size: 1.4rem; }
+}
+.f-st{ font-size: 1.4rem;
+  @media (min-width: 769px){ font-size: 1.2rem; }
+}
+.f-stm{ font-size: 1.2rem;
+  @media (min-width: 769px){ font-size: 1rem; }
+}
+.f-stl{ font-size: 1rem;
+  @media (min-width: 769px){ font-size: .8rem; }
+}
+.f-si{ font-size: .8rem;
+  @media (min-width: 769px){ font-size: .6rem; }
+}
+.f-sxs{ font-size: .7rem;
+  @media (min-width: 769px){ font-size: .5; }
+}
 
 // decoration
 .f-dec-it{ font-style: italic; }

@@ -12,6 +12,10 @@
 .o-tile__info{
   position: relative;
   padding: 8vw (@space * 1) 0;
+
+  @media (min-width: 769px){
+    padding: 3em (@space * 1) 0;
+  }
 }
 
 .o-tile__logo{
@@ -23,6 +27,12 @@
   height: @width;
   border-color: @bg;
   border-style: solid;
+
+  @media (min-width: 769px){
+    top: -50px;
+    width: 100px;
+    height: 100px;
+  }
 }
 .o-tile__logo--long{
   @width: 6vw;
@@ -31,6 +41,12 @@
   height: @width;
   border-color: @l-grey;
   border-style: solid;
+
+  @media (min-width: 769px){
+    top: -15px;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .o-tile__name{ padding: 0 (@space * 3.5) 0; }

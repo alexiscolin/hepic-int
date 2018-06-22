@@ -1,14 +1,15 @@
-console.log('hello');
+(function(){
+  console.log('hello');
 
-var elem = document.querySelector('.o-grid');
-var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.o-tile-grided',
-  columnWidth: 200
-});
+  const elem = document.querySelector('.o-grid');
+  let msnry;
 
-// element argument can be a selector string
-// //   for an individual element
-// var msnry = new Masonry( '.grid', {
-//   // options
-// })
+  imagesLoaded( elem, function() {
+    msnry = new Masonry(elem, {
+      itemSelector: '.o-tile-grided',
+      columnWidth: 100,
+      fitWidth: true,
+      gutter: 20
+    });
+  });
+})();

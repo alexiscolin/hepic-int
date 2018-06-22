@@ -15,39 +15,40 @@ append inner
 
   include ../layout/data.pug
   
-  main.o-main.o-grid.pl-1.pr-1.pb-1
+  main.o-main.pl-1.pr-1.pb-1
+    section.o-grid
   
-    //- IMAGINARIUM CURRENT CONTEST
-    +tile('current', imaginarium)
+      //- IMAGINARIUM CURRENT CONTEST
+      +tile('current', imaginarium)
+      
+      //- NIKE PODIUM
+      +tile-podium(nike)
+      
+      //- IMAGINARIUM CLOSING CONTEST
+      +tile('current', imaginarium, 'closing')
+      
+      //- IMAGINARIUM CLOSED CONTEST
+      +tile('closed', imaginarium)
+      
+      
+      
+      //- NIKE PODIUM
+      +tile-podium(nike)
+      //- IMAGINARIUM CURRENT CONTEST
+      +tile('current', imaginarium)
+      
     
-    //- NIKE PODIUM
-    +tile-podium(nike)
-    
-    //- IMAGINARIUM CLOSING CONTEST
-    +tile('current', imaginarium, 'closing')
-    
-    //- IMAGINARIUM CLOSED CONTEST
-    +tile('closed', imaginarium)
-    
-    
-    
-    //- NIKE PODIUM
-    +tile-podium(nike)
-    //- IMAGINARIUM CURRENT CONTEST
-    +tile('current', imaginarium)
-    
-  
-    
-    
-    
-    //- IMAGINARIUM CLOSED CONTEST
-    +tile('closed', imaginarium)
-    
-    //- IMAGINARIUM CLOSING CONTEST
-    +tile('current', imaginarium, 'closing')
-    //- IMAGINARIUM CURRENT CONTEST
-    +tile('current', imaginarium)
-    
-    //- NIKE PODIUM
-    +tile-podium(nike)
-    
+      
+      
+      
+      //- IMAGINARIUM CLOSED CONTEST
+      +tile('closed', imaginarium)
+      
+      //- IMAGINARIUM CLOSING CONTEST
+      +tile('current', imaginarium, 'closing')
+      //- IMAGINARIUM CURRENT CONTEST
+      +tile('current', imaginarium)
+      
+      //- NIKE PODIUM
+      +tile-podium(nike)
+      
