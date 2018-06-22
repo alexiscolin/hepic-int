@@ -4,8 +4,10 @@ mixin tile(type, brand, state)
     
       //- affichage damier
       if(type === "closed")
-        svg(viewBox="0 0 395.5 240.38").o-tile-closingimg.p-abs.p-init.w-60
-          use(xlink:href="#img-finish")
+        //- svg(viewBox="0 0 395.5 240.38")
+        //-   use(xlink:href="#img-finish")
+        img(srcset="./assets/img/flag@2x.png 2x, ./assets/img/flag@1x.png 1x" src="./assets/img/flag@1x.png").o-tile-closingimg.p-abs.p-init.w-60
+
           
       img(src="./assets/img/brands/imaginarium/imaginarium-pic.jpg", alt="").full-width
       .o-tile__info
@@ -47,4 +49,4 @@ mixin tile(type, brand, state)
     if(type !== "closed")        
       a(href="/vote.html").o-tile__vote.brad-100
         svg(viewBox="0 0 42 42").o-svgw-ico
-          use(xlink:href="#ico-vote")
+          use(xlink:href="#ico-vote") 
