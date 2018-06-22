@@ -7,6 +7,10 @@
   overflow: hidden;
   margin-bottom: @space;
   background: @bg;
+
+  @media (min-width: 769px){
+    margin-bottom: @space * 2;
+  }
 }
 
 .o-tile__info{
@@ -14,7 +18,7 @@
   padding: 8vw (@space * 1) 0;
 
   @media (min-width: 769px){
-    padding: 3em (@space * 1) 0;
+    padding: 2em (@space * 1) 0;
   }
 }
 
@@ -66,6 +70,10 @@
 .o-tile__ico--inline{
   display: inline-block;
   width: 1.4rem;
+
+  @media (min-width: 769px){
+    width: 1rem;
+  }
 }
 
 .o-tile__vote{
