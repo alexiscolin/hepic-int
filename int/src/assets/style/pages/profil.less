@@ -1,12 +1,22 @@
 @import "../utils/var";
 @import "../utils/layout";
 
-.o-profil-pic{ width: 15vw; }
+@minHeight: 150px;
+@lgHeight: 240px;
+@deskSpace: 12rem;
+
+.o-profil-pic{
+  width: 15vw;
+
+  @media ( min-width: @tab ){
+    width: 3rem;
+  }
+}
 .o-profil-pics{ flex-wrap: wrap; }
 
 // https://guoyunhe.me/demo/flexbin/ -> grid
 .o-profil-pics__img{
-  @height: 150px;
+  @height: @minHeight;
   position: relative;
   display: block;
   height: @height;
@@ -17,6 +27,15 @@
     width: auto;
   }
 
+  @media ( min-width: @tab ){
+    height: @height * 2;
+  }
+
+  @media ( min-width: @desktop ){
+    width: @deskSpace;
+    height: @deskSpace;
+  }
+
   & > img{
     height: @height;
     object-fit: cover;
@@ -24,20 +43,40 @@
     min-width: 100%;
     vertical-align: bottom;
 
+
     @media (min-width: 500px){
       max-width: 100%;
       min-width: 100%;
     }
+
+    @media ( min-width: @tab ){
+      height: 100%;
+    }
+
+    // @media ( min-width: @desktop ){
+    //   height: 10rem;
+    //   width: 10rem;
+    // }
   }
 }
 
 .o-profil-pics__img--large{
-  @height: 240px;
+  @height: @lgHeight;
   width: 100%;
   height: @height;
 
+  @media ( min-width: @tab ){
+    @height: @minHeight;
+    width: 40%;
+    height: @height * 2;
+  }
+  @media ( min-width: @desktop ){
+    width: @deskSpace;
+    height: @deskSpace;
+  }
+
   & > img{
-    height: @height;
+    height: 100%;
     max-width: 100%;
     min-width: 100%;
   }

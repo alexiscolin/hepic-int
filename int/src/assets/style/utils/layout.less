@@ -36,7 +36,7 @@ button{
 .o-main{
   padding-top: @maintop-margin;
   min-height: 100vh;
-  max-width: 1500px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .o-title{ height: @space-h-unit * 2; }
@@ -146,6 +146,11 @@ button{
 .o-svg-btn{
   width: @ico-width;
   height: @ico-width;
+
+  @media (min-width: @desktop){
+    width: @ico-width / 1.5;
+    height: @ico-width / 1.5;
+  }
 }
 
 .checkbox-custom, .radio-custom {
