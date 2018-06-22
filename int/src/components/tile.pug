@@ -16,10 +16,10 @@ mixin tile(type, brand, state)
         //- affichage infos fin de participation/participation
         case type 
           when "closed"
-            .f-bold.f-sfat.f-center.pt-1.pb-05
+            .f-bold.f-sfat.f-center.pt-05.pb-05
               | Clotûre des participations
               
-            .f-light.pb-1.f-center
+            .f-light.pb-05.f-center
               svg(viewBox="0 0 64.22 62.67").o-tile__ico--inline.pb-05.mr-05.va-mid
                 use(xlink:href="#ico-gift")
               span.va-mid.f-stl= brand.gifts
