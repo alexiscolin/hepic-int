@@ -9,7 +9,7 @@
   imagesLoaded(elem, function () {
     msnry = new Masonry(elem, {
       itemSelector: '.o-tile-grided',
-      columnWidth: 100,
+      columnWidth: '.o-tile-grided',
       fitWidth: true,
       gutter: 20
     });
