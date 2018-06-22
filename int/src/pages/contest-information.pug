@@ -1,17 +1,10 @@
 extends ../pages/contest.pug
 
+include ../components/popin-image.pug 
+
 block metadata
   - var title = "Concours"
   - var description = "page de concours"
   
 block contestContent
-  figure.w-100.mt-3
-    img(src="./assets/img/brands/nike/nike-course.jpg").full-width
-    figcaption.o-warning
-      span.o-warning__title Attention
-      span.o-warning__info En cas de validation, il ne sera plus possible de modifier la photo ou de participer à ce concours avec une autre photo, même en cas de suppression.
-
-  div.d-col-flex.mt-3.pr-4.pl-4
-    h2.f-bold.f-sfat.pt-05.pb-05.f-center.f-green Participation validée ! 
-
-  a(href="flux.html").no-link.d-block.mt-2.f-right.pr-2.pb-1.f-grey.f-dec-it retour au flux
+  +uploadimage('information')
