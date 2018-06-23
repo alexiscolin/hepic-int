@@ -16,6 +16,8 @@ this project is spread between `int` and `app` folder. `int` folder covers integ
 3. Start web server with the gulp script `$ yarn watch`,
 4. Enjoy the INT app in your favorite browser following the local URL given by browser-sync.
 
+You can also visit the website using the following URL address: [http://hepic.netlify.com](http://hepic.netlify.com)
+
 
 ## development
 ### Frameworks & preprocessors
