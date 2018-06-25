@@ -18,6 +18,7 @@ this project is spread between `int` and `app` folder. `int` folder covers integ
 
 You can also visit the website using the following URL address: [http://hepic.netlify.com](http://hepic.netlify.com)
 
+**In order to build the INT site, you have to run the following command inside the `hepic` folder: `$ yarn gulp`.**
 
 ## development
 ### Frameworks & preprocessors
