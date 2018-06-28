@@ -8,12 +8,12 @@ mixin tile-closing(type, brand)
         h2.o-tile__name.p-hcenter-rel.f-cap.f-st= brand.brand
         h3.o-tile__desc.p-hcenter-rel.f-grey.f-cap.f-light.f-stl= brand.desc
         
-        ul.d-row-flex.no-list
+        ul.d-row-flex.no-list.pt-1.pb-1
           li.p-hcenter-rel.d-flex-eq.f-light.f-si 
             svg(viewBox="0 0 62.37 62.37").o-tile__ico
               use(xlink:href="#ico-cible")
-            span Photo : <br> #{brand.target}
-          li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
+            span #{brand.target}
+          li.p-hcenter-rel.d-flex-eq.pl-1.pr-1.f-light.f-si 
             svg(viewBox="0 0 64.22 62.67").o-tile__ico
               use(xlink:href="#ico-gift")
                 span= brand.gifts 
