@@ -9,7 +9,7 @@ append inner
   include ../layout/data.pug
   
   //- brand target
-  - var brand = nike;
+  - var brand = imaginarium;
   
   main.o-main.c-backbg.pb-1
     .mt-negMain.w-full
@@ -33,12 +33,12 @@ append inner
           p.p-rel.mt-3.f-center.pl-05.pr-05.sep-bef.sep-aft.f-stl= brand.infos 
 
         .pl-1.pr-1.pt-2
-          ul.d-row-flex.no-list.b-reg.brad-6
+          ul.d-row-flex.no-list.b-reg.brad-6.pt-1.pb-1
             li.p-hcenter-rel.d-flex-eq.f-light.f-si 
               svg(viewBox="0 0 62.37 62.37").o-tile__ico.o-tile__ico--large
                 use(xlink:href="#ico-cible")
-              span Photo : <br> #{brand.target}
-            li.p-hcenter-rel.d-flex-eq.p-1.f-light.f-si 
+              span #{brand.target}
+            li.p-hcenter-rel.d-flex-eq.pr-1.pl-1.f-light.f-si 
               svg(viewBox="0 0 64.22 62.67").o-tile__ico.o-tile__ico--large
                 use(xlink:href="#ico-gift")
               span= brand.gifts
