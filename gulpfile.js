@@ -95,7 +95,7 @@ gulp.task('sync', function() {
 
 
 gulp.task('default', ['clean', 'html', 'img', 'js', 'data', 'fonts', 'css']);
-gulp.task('build', ['clean', 'html', 'js', 'cssProd', 'data', 'img', 'fonts', 'critical']);
+gulp.task('build', ['clean', 'html', 'js', 'cssProd', 'data', 'img', 'fonts']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
