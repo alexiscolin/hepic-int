@@ -37,7 +37,7 @@ append inner
             img(src=pic.brand).w-100.h-100.brad-100
           div(class={"o-ico-sprite--num": Number.isInteger(pic.rank), "o-ico-sprite--or": pic.rank === "gold", "o-ico-sprite--argent": pic.rank === "silver", "o-ico-sprite--bronze": pic.rank === "bronze"}).o-ico-sprite.o-ico-sprite--little.va-mid.f-center
             if(Number.isInteger(pic.rank))  
-              span.p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey 13
+              span.p-abs.p-vhcenter-abs.pt-025.f-sxs.f-bold.f-lgrey= pic.rank
       
         
     
