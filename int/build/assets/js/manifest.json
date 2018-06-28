@@ -1,0 +1,12 @@
+{
+  "name": "Hepic",
+  "short_name": "Hepic",
+  "lang": "fr",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [{
+    "src": "../img/homescreen192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+} 
