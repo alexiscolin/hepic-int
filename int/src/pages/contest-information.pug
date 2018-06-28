@@ -6,5 +6,10 @@ block metadata
   - var title = "Concours"
   - var description = "page de concours"
   
+block backlink
+  a(href="/contest.html").o-title.o-back.pl-1.mt-1.pt-025.z-5000
+    svg(viewBox="0 0 29.67 25.71").o-svg-btn.va-mid
+      use(xlink:href="#ico-arrow")
+  
 block contestContent
   +uploadimage('information')
