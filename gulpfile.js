@@ -67,6 +67,11 @@ gulp.task('fonts', function() {
    .pipe(gulp.dest(int.build + '/assets/fonts'));
 });
 
+gulp.task('data', function() {
+   gulp.src(int.src + '/assets/js/**/*.{json,toml,xml}')
+   .pipe(gulp.dest(int.build + '/assets/js'));
+});
+
 gulp.task('critical', ['html','cssProd'], function() {
   return  gulp.src(int.build + '/*.html')
     .pipe(critical({
@@ -89,14 +94,15 @@ gulp.task('sync', function() {
 
 
 
-gulp.task('default', ['clean', 'html', 'img', 'js', 'fonts', 'css']);
-gulp.task('build', ['clean', 'html', 'js', 'cssProd', 'img', 'fonts', 'critical']);
+gulp.task('default', ['clean', 'html', 'img', 'js', 'data', 'fonts', 'css']);
+gulp.task('build', ['clean', 'html', 'js', 'cssProd', 'data', 'img', 'fonts', 'critical']);
 
 gulp.task('watch', ['sync'], function(){
   gulp.watch(int.src + '/assets/style/**/*.less', ['css']);
   gulp.watch(int.src + '/assets/js/**/*.js', ['js']);
   gulp.watch('int/src/assets/img/**/*', {cwd:'./'}, ['img']);
   gulp.watch('int/src/assets/fonts/**/*.{ttf,woff,woff2,eof,svg}', {cwd:'./'}, ['fonts']);
+  gulp.watch('int/src/assets/js/**/*.{json,toml,xml}', {cwd:'./'}, ['data']);
   gulp.watch(int.src + '/**/*.pug', ['html']);
   gulp.watch(int.build + '/*.html').on('change', bs.reload);
 });
