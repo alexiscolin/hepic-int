@@ -26,7 +26,7 @@ This project is written using frammeworks and libraries and various preprocessor
 
 * LESS (Atomic CSS - BEM style)
 * PUG/Jade (Web Components OOP)
-* VueJS
+* VueJS (ES6)
 
 ### Tools
 This project requires some Tools
