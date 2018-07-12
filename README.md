@@ -2,11 +2,11 @@
 <p>&nbsp;</p>
 
 # Hepic
-🥇 hepic repo to host files about integration and VueJS app.
+🥇 hepic repo to host files about integration files.
 
 ## Installation
 
-this project is spread between `int` and `app` folder. `int` folder covers integration files about first MVP commit whereas `app` folder covers vueJS app.
+this project sources are located inside the `int` folder. `int` folder covers integration files about first MVP commit.
 
 ### INT
 **INT** contains two differents folders, `src` is used to create a `build` folder through gulp process. `Build` is the one you need to interest in if you want to download executable files. **Download this folder and open the index.html in your browser to start using the MVP in pre-production**.
@@ -18,7 +18,18 @@ this project is spread between `int` and `app` folder. `int` folder covers integ
 
 You can also visit the website using the following URL address: [http://hepic.netlify.com](http://hepic.netlify.com)
 
-**In order to build the INT site, you have to run the following command inside the `hepic` folder: `$ yarn gulp`.**
+**In order to watch dev the INT site, you have to run the following command inside the `hepic` folder:**
+
+```shell
+$ yarn watch
+```
+
+**In order to build the INT site, you have to run the following command inside the `hepic` folder:**
+
+```shell
+$ yarn build
+```
+
 
 ## development
 ### Frameworks & preprocessors
@@ -26,13 +37,13 @@ This project is written using frammeworks and libraries and various preprocessor
 
 * LESS (Atomic CSS - BEM style)
 * PUG/Jade (Web Components OOP)
-* VueJS (ES6)
 
 ### Tools
 This project requires some Tools
 
-* WebPack 4 (and CLI)
 * Gulp
+* Babel
+* ImgOptim
 
 ## Enjoy the app
 ![](https://media.giphy.com/media/K76qbIIjXvcqI/giphy.gif)
