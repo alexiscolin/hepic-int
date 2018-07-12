@@ -8,7 +8,7 @@
 
 this project sources are located inside the `int` folder. `int` folder covers integration files about first MVP commit.
 
-### INT
+### Integration
 **INT** contains two differents folders, `src` is used to create a `build` folder through gulp process. `Build` is the one you need to interest in if you want to download executable files. **Download this folder and open the index.html in your browser to start using the MVP in pre-production**.
 
 1. Clone Hepic git repo by using the following Terminal command `$ git clone https://github.com/alexiscolin/hepic.git`,
