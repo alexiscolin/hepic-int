@@ -4,6 +4,12 @@
 # Hepic
 🥇 hepic repo to host files about integration files.
 
+## Important notes
+
+**THIS REPO IS CREATED, MANAGED, USED BY DJDB AND MUST REMAIN SO.<br>PLEASE, FORK OR DOWNLOAD IT TO PUSH YOUR OWN MONDIFICATIONS**
+
+Some of the CSS code here is old and don't match anymore with the Hepic App
+
 ## Installation
 
 this project sources are located inside the `int` folder. `int` folder covers integration files about first MVP commit.
