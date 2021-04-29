@@ -1,4 +1,4 @@
-<p align="center"><img src="http://files.de-jaune-et-de-bleu.com/img/github/hepic/hepic.png" width="50%"></p>
+<p align="center"><img src="https://files.jaunebleu.co/img/github/hepic/hepic.png" width="50%"></p>
 <p>&nbsp;</p>
 
 # Hepic
